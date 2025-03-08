@@ -1,4 +1,3 @@
-import MovieCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
@@ -13,7 +12,7 @@ export default function Index() {
   const { data: movies,
     loading: moviesLoading,
     error: moviesError } = useFetch(() => fetchMovies({
-      query: "love",
+      query: ""
     }));
 
   return (
@@ -50,9 +49,8 @@ export default function Index() {
               <FlatList
                 data={movies}
                 renderItem={({ item }) => (
-                  <MovieCard
-                  {...item}
-                  />
+                  <Text className="text-white text-sm">
+                    {item.title}</Text>
                 )}
                 keyExtractor={(item) => item.id.toString()}
                 numColumns={3}
