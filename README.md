@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# Welcome to MovieNic App - React Native 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+MovieNic là một ứng dụng di động phát triển bằng **React Native** (sử dụng **Expo**) giúp người dùng khám phá thông tin về phim và chương trình truyền hình. Ứng dụng tích hợp **TMDb API** để lấy dữ liệu phim và sử dụng **Appwrite** để quản lý xác thực người dùng và dữ liệu backend.
 
-## Get started
+## 🚀 Công nghệ sử dụng
+- **React Native (Expo)** - Framework
+- **TMDb API** - Lấy dữ liệu phim, thông tin chi tiết, poster, trailer
+- **Appwrite** - Quản lý người dùng, xác thực, lưu trữ dữ liệu backend
+- **React Navigation** - Điều hướng giữa các màn hình
+- **Axios** - Gửi request API
+- **Redux (hoặc Context API)** - Quản lý trạng thái ứng dụng
 
-1. Install dependencies
+## 📌 Tính năng chính
+- 📽️ **Danh sách phim**: Hiển thị danh sách phim đang hot, phim mới nhất, phim thịnh hành
+- 🔍 **Tìm kiếm phim**: Người dùng có thể tìm kiếm phim theo tên
+- 📄 **Chi tiết phim**: Xem thông tin chi tiết về phim, diễn viên, trailer
+- ❤️ **Lưu phim yêu thích**: Người dùng có thể lưu lại danh sách phim yêu thích (yêu cầu đăng nhập)
+- 🔐 **Xác thực người dùng**: Đăng ký, đăng nhập bằng Appwrite Authentication
+- 📋 **Quản lý tài khoản**: Cập nhật thông tin cá nhân
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Cài đặt và chạy dự án
+### Yêu cầu
+- **Node.js** >= 14
+- **Expo CLI**
+- **Tài khoản TMDb API & Appwrite**
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
+### 1️⃣ Clone repository
 ```bash
-npm run reset-project
+git clone https://github.com/chaolaolo/MovieNic_ReactNative.git
+cd MovieNic_ReactNative
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### 2️⃣ Cài đặt dependencies
+```bash
+npm install
+```
 
-## Learn more
+### 3️⃣ Cấu hình TMDb API & Appwrite
+- Tạo tài khoản tại [TMDb](https://www.themoviedb.org/) và lấy **API Key**
+- Thiết lập **Appwrite Backend** và lấy endpoint, project ID
+- Tạo file `.env` trong thư mục gốc và thêm các thông tin sau:
+  ```env
+  TMDB_API_KEY=your_tmdb_api_key
+  APPWRITE_ENDPOINT=your_appwrite_endpoint
+  APPWRITE_PROJECT_ID=your_appwrite_project_id
+  ```
 
-To learn more about developing your project with Expo, look at the following resources:
+### 4️⃣ Chạy ứng dụng
+```bash
+npx expo start
+```
+- Chạy trên thiết bị thật với **Expo Go** hoặc trên máy ảo (**Android Emulator / iOS Simulator**)
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 📸 Ảnh màn hình (Screenshots)
+ <table>
+  <tr>
+    <td colspan="5">MovieNic Screenshots</td>
+  </tr>
+  <tr>
+    <td><img src="assets/images/screenshots/z6394383747803_f1ca8d3a138f59f683cf57f23ec1fbf1.jpg" width="190"></td>
+    <td><img src="assets/images/screenshots/z6394383747729_be573c7c8ff0039499edcad586e73da1.jpg" width="190"></td>
+    <td><img src="assets/images/screenshots/z6394383746984_3d0f1836d8ead1bf739c94a6fbc53a8d.jpg" width="190"></td>
+    <td><img src="assets/images/screenshots/z6394383748360_9b0f6d7a8c84a07095ce430f11840b78.jpg" width="190"></td>
+  </tr>
+   <tr>
+     <td colspan="5">Updating...</td>
+   </tr>
+</table>
 
-## Join the community
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📧 Liên hệ
+- Tác giả: Chảo Láo Lở
+- Nếu bạn có bất kỳ câu hỏi nào về dự án, vui lòng liên hệ với tôi qua email: [chaolaolo290604@gmail.com](mailto:chaolaolo@example.com).
