@@ -8,7 +8,6 @@ import {
 } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 import { icons } from "@/constants/icons";
 import { fetchMovieDetails } from "@/services/api";
 import useFetch from "@/services/useFetch";
@@ -27,7 +26,7 @@ const MovieInfo = ({ label, value }: MovieInfoProps) => (
   </View>
 );
 
-const Details = () => {
+const MovieDetails = () => {
   const router = useRouter();
   const { id } = useLocalSearchParams();
 
@@ -128,4 +127,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default MovieDetails;
