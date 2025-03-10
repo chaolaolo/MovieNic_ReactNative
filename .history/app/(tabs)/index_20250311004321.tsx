@@ -1,6 +1,5 @@
 import MovieCard from "@/components/MovieCard";
 import SearchBar from "@/components/SearchBar";
-import TrendingCard from "@/components/TrendingCard";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { fetchMovies } from "@/services/api";
@@ -64,7 +63,8 @@ export default function Index() {
                     gap: 26,
                   }}
                   renderItem={({ item, index }) => (
-                    <TrendingCard movie={item} index={index} />
+                    // <TrendingCard movie={item} index={index} />
+                    <Text>{item.title}</Text>
                   )}
                   keyExtractor={(item) => item.movie_id.toString()}
                   ItemSeparatorComponent={() => <View className="w-4" />}
